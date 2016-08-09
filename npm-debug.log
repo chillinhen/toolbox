@@ -1,0 +1,85 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   '/usr/local/bin',
+1 verbose cli   'bower' ]
+2 info using npm@3.3.6
+3 info using node@v5.0.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData /usr/local/bin
+8 silly fetchPackageMetaData bower
+9 silly fetchNamedPackageData bower
+10 silly mapToRegistry name bower
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry uri https://registry.npmjs.org/bower
+14 silly fetchOtherPackageData /usr/local/bin
+15 silly cache add args [ '/usr/local/bin', null ]
+16 verbose cache add spec /usr/local/bin
+17 silly cache add parsed spec Result {
+17 silly cache add   raw: '/usr/local/bin',
+17 silly cache add   scope: null,
+17 silly cache add   name: null,
+17 silly cache add   rawSpec: '/usr/local/bin',
+17 silly cache add   spec: '/usr/local/bin',
+17 silly cache add   type: 'local' }
+18 error addLocal Could not install /usr/local/bin
+19 silly fetchPackageMetaData Error: EISDIR: illegal operation on a directory, read
+19 silly fetchPackageMetaData     at Error (native)
+19 silly fetchPackageMetaData  error for /usr/local/bin { [Error: EISDIR: illegal operation on a directory, read] errno: -21, code: 'EISDIR', syscall: 'read' }
+20 verbose request uri https://registry.npmjs.org/bower
+21 verbose request no auth needed
+22 info attempt registry request try #1 at 15:30:45
+23 verbose request id db7860f0e057f05a
+24 verbose etag "DXC5UUMO57DR66PP7CETXCDV1"
+25 http request GET https://registry.npmjs.org/bower
+26 http 304 https://registry.npmjs.org/bower
+27 verbose headers { date: 'Fri, 25 Mar 2016 14:30:45 GMT',
+27 verbose headers   via: '1.1 varnish',
+27 verbose headers   'cache-control': 'max-age=300',
+27 verbose headers   etag: '"DXC5UUMO57DR66PP7CETXCDV1"',
+27 verbose headers   age: '280',
+27 verbose headers   connection: 'keep-alive',
+27 verbose headers   'x-served-by': 'cache-ams4131-AMS',
+27 verbose headers   'x-cache': 'HIT',
+27 verbose headers   'x-cache-hits': '4',
+27 verbose headers   'x-timer': 'S1458916245.403226,VS0,VE0',
+27 verbose headers   vary: 'Accept' }
+28 silly get cb [ 304,
+28 silly get   { date: 'Fri, 25 Mar 2016 14:30:45 GMT',
+28 silly get     via: '1.1 varnish',
+28 silly get     'cache-control': 'max-age=300',
+28 silly get     etag: '"DXC5UUMO57DR66PP7CETXCDV1"',
+28 silly get     age: '280',
+28 silly get     connection: 'keep-alive',
+28 silly get     'x-served-by': 'cache-ams4131-AMS',
+28 silly get     'x-cache': 'HIT',
+28 silly get     'x-cache-hits': '4',
+28 silly get     'x-timer': 'S1458916245.403226,VS0,VE0',
+28 silly get     vary: 'Accept' } ]
+29 verbose etag https://registry.npmjs.org/bower from cache
+30 verbose get saving bower to /Users/chilliscope/.npm/registry.npmjs.org/bower/.cache.json
+31 silly rollbackFailedOptional Starting
+32 silly rollbackFailedOptional Finishing
+33 silly runTopLevelLifecycles Starting
+34 silly runTopLevelLifecycles Finishing
+35 silly install printInstalled
+36 verbose stack Error: EISDIR: illegal operation on a directory, read
+36 verbose stack     at Error (native)
+37 verbose cwd /Users/chilliscope/Documents/Webseiten/toolbox
+38 error Darwin 15.0.0
+39 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "/usr/local/bin" "bower"
+40 error node v5.0.0
+41 error npm  v3.3.6
+42 error code EISDIR
+43 error errno -21
+44 error syscall read
+45 error eisdir EISDIR: illegal operation on a directory, read
+45 error eisdir This is most likely not a problem with npm itself
+45 error eisdir and is related to npm not being able to find a package.json in
+45 error eisdir a package you are trying to install.
+46 verbose exit [ -21, true ]
