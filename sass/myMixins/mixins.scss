@@ -11,6 +11,20 @@
 }
 
 /*** Mixins & Placeholders ***/
+@mixin pointer-events($method){
+-moz-pointer-events: $method;
+-webkit-pointer-events: $method;
+-ms-pointer-events: $method;
+pointer-events: $method;
+}
+
+@mixin transform($method, $number){
+    -moz-transform: $method($number);
+    -webkit-transform: $method($number);
+    -ms-transform: $method($number);
+    transform: $method($number);
+}
+
 @mixin appearance($value){
     -webkit-appearance: $value;
     -moz-appearance:    $value;
@@ -26,11 +40,11 @@
     overflow: hidden;
 }
 @mixin border ($width,$style,$color){
-	border: {
-		width: $width;
-		style:$style;
-		color: $color;
-	}
+    border: {
+        width: $width;
+        style:$style;
+        color: $color;
+    }
 }
 @mixin bg-color($bg){
     background-color: $bg;
@@ -95,7 +109,7 @@
 @mixin active-style {
     background:$brand-primary;
     background-image:none !important;
-    color:$white;
+    color:#fff;
 }
 @mixin icon-style ($cnt, $pd-ri, $op, $mg-le, $size) {
     font-family: 'FontAwesome';
@@ -190,6 +204,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
           page-break-inside: $method;
                break-inside: $method;
 }
+
+@mixin target-for-fixed-menu($height){
+    *:target:before{
+        content: ' ';
+        display: block;
+        height: $height;
+        margin: -$height 0 0;
+    }
+}
 /******* SVG *********/
 @mixin svg-scale($size){
 	position: relative; 
@@ -200,8 +223,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 			
 	svg{
 		position: absolute; 
-	 	height: 100%; 
-	 	width: 100%; 
+	 	height: $size; 
+	 	width: $size; 
 	 	left: 0; 
 	 	top: 0;
 	}
@@ -235,4 +258,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
         z-index: 100000; /* Above WP toolbar. */
     }
 
+}
+/**** Filter ****/
+@mixin blur($item){
+      -webkit-filter: blur($item);
+  -moz-filter: blur($item);
+  -o-filter: blur($item);
+  -ms-filter: blur($item);
+  filter: blur($item);
+  z-index:-1;
+}
+/*** typography***/
+@mixin header-subline ($color, $width, $height, $mg-top){
+    &:after {
+        content:'';
+        display:block;
+        height:$height;
+        width:$width;
+        background:$color;
+        margin-top: $mg-top;
+    }
 }
