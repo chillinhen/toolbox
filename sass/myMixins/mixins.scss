@@ -9,7 +9,18 @@
         color:$brand-primary;
     }
 }
-
+//Grid**/
+@mixin simple-flex-square-grid($margin){
+    @include flex-grow(1);
+    > *{
+        @include flex(1);
+        margin:$margin;
+    }
+    > *:last-child{
+        @include flex-grow(0);
+        @include flex-shrink(0);  
+    }
+}
 /*** Mixins & Placeholders ***/
 @mixin pointer-events($method){
 -moz-pointer-events: $method;
