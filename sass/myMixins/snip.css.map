@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,6EAAM;EACF,WAAW,EAAE,IAAI;;AAErB,gCAAiC;EAE7B,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,MAAM;;AAEtB,aAAc;EAEV,gBAAgB,EAAE,GAAG;EACrB,KAAK,EAAE,KAAK;;AAEhB,4BAA6B;EAEzB,KAAK,EAAE,GAAG",
+"sources": ["snip.scss"],
+"names": [],
+"file": "snip.css"
+}
