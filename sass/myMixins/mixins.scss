@@ -1,3 +1,11 @@
+/** automat. Silbentrennung ***/
+@mixin hyphenate ($attr){
+    -webkit-hyphens: $attr;
+    -moz-hyphens: $attr;
+    -ms-hyphens: $attr;
+    hyphens: $attr;
+}
+
 @mixin test(){
     border:2px dotted $foo;
 }
@@ -234,6 +242,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
         display: block;
         height: $height;
         margin: -$height 0 0;
+    }
+}
+@mixin sticky-menu{
+    &.sticky{
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        background:#fff;
+        @include shadow;
+        @include transition (background, 2s, ease-out);
+        z-index:9999;
     }
 }
 /******* SVG *********/
